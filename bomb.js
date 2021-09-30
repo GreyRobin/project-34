@@ -4,7 +4,7 @@ class Bomb{
  restitution: 0.08
 };
 
-this.body = Bodies.ellipse(x, y, w, h, options);
+this.body = Bodies.ellipse;
 this.w = w;
 this.h = h;
 
