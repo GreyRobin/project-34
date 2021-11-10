@@ -4,7 +4,7 @@ class Bomb{
  restitution: 0.08
 };
 
-this.body = Bodies.ellipse;
+this.body = Bodies.rectangle(x,y,w,h,options)
 this.w = w;
 this.h = h;
 
@@ -18,7 +18,7 @@ show() {
  rotate(angle);
  ellipseMode(CENTER);
  fill("#8d6e63");
- rect(0, 0, this.w, this.h);
+ ellipse(0, 0, this.w, this.h);
  pop();
 }
 }

@@ -13,11 +13,12 @@ function setup() {
 
   engine = Engine.create();
   world = engine.world;
-  bomb = new Bomb(200,100,80,80)
+  bomb = new Bomb(200,10,80,80)
   ground = new Ground(200,350,width,height/3)
   button = createButton("click to shoot")
   button.position(350,200)
   button.class("button")
+  button.mouseClicked(shoot)
 }
 
 
@@ -26,10 +27,8 @@ function draw()
   background(51);
   Engine.update(engine);
   bomb.show()
-  ground.show()
-  drawSprites()
-}
+  ground.show()}
 
 function shoot(){
-  Matter.Body.applyForce(bomb.body,{x:0,y:0},{x:-0.05,y:0})
+  Matter.Body.applyForce(bomb.body,{x:0,y:0},{x:-1,y:0})
 }
